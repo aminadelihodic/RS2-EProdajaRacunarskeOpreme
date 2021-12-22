@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converter="clr-namespace:EProdajaRacOp.MobileApp.Converter" xmlns:viewModels="clr-namespace:EProdajaRacOp.MobileApp.ViewModels" x:DataType="viewModels:ProizvodDetailViewModel"
+             mc:Ignorable="d"
+             x:Class="EProdajaRacOp.MobileApp.Views.ProizvodDetaljiPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:ImageConverter x:Key="imgConv"></converter:ImageConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="Fill">
+            <Grid  Padding="10" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" ></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="450" ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="0" Grid.Column="0">
+                    <Image Margin="0, 0, 0, 0" HorizontalOptions="Center" VerticalOptions="Center"  Source="{Binding Proizvod.Slika,Converter={StaticResource imgConv}}"
+                           WidthRequest="300"
+                           HeightRequest="300"
+                           Aspect="AspectFit"
+                           />
+                </StackLayout>
+
+                <StackLayout IsVisible="{Binding Ocijenjeno}" Grid.Row="1" Grid.Column="0">
+                    <Label  HorizontalOptions="Center" Text="{Binding ProsjecnaOcjena, StringFormat='Prosječna ocjena: {0:F2} '}"/>
+                </StackLayout>
+
+                <StackLayout IsVisible="{Binding NijeOcijenjeno}" Grid.Row="1" Grid.Column="0" >
+
+                    <Label  HorizontalOptions="Center" Text="Ocijeni artikal:"/>
+                    <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Command="{Binding OcijeniSa1Command}" Grid.Row="0" Grid.Column="0" FontSize="Micro" Text="1" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"/>
+                        <Button Command="{Binding OcijeniSa2Command}" Grid.Row="0" Grid.Column="1" FontSize="Micro" Text="2" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"/>
+                        <Button Command="{Binding OcijeniSa3Command}" Grid.Row="0" Grid.Column="2" FontSize="Micro" Text="3" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"/>
+                        <Button Command="{Binding OcijeniSa4Command}" Grid.Row="0" Grid.Column="3" FontSize="Micro" Text="4" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"/>
+                        <Button Command="{Binding OcijeniSa5Command}" Grid.Row="0" Grid.Column="4" FontSize="Micro" Text="5" WidthRequest="30" HeightRequest="30" BorderRadius="100" BackgroundColor="Wheat"/>
+
+                    </Grid>
+                </StackLayout>
+
+
+                <StackLayout Grid.Row="2" >
+
+                    <Label FontAttributes="Bold" FontSize="Large" Text="{Binding Proizvod.Naziv}"/>
+                    <Label Text="{Binding Proizvod.Sifra}"/>
+                    <Label TextColor="LightGreen" Text="{Binding Proizvod.Cijena, StringFormat='Cijena: {0} KM'}"/>
+
+                    <Grid WidthRequest="150">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Column="0" Text="-1" Command="{Binding SmanjiKolicinuCommand}"/>
+                        <Entry Grid.Column="1" Text="{Binding Kolicina}" Placeholder="1" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
+                        <Button Grid.Column="2" Text="+1" Command="{Binding PovecajKolicinuCommand}"/>
+                    </Grid>
+                    
+                    <Button Text="Dodaj u korpu"  Command="{Binding NaruciCommand}" CornerRadius="7"
+                            TextColor="LightPink"
+                            BackgroundColor="DimGray"
+                            />
+
+                </StackLayout>
+
+
+              
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
