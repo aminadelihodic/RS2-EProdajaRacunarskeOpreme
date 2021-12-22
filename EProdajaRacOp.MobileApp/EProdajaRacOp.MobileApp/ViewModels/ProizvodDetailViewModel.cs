@@ -53,20 +53,25 @@ namespace EProdajaRacOp.MobileApp.ViewModels
 
 
             await _ocjeneService.Insert<Ocjene>(x);
-            Ocijenjeno = true;
-            NijeOcijenjeno = false;
+            await UcitajOcjenu();
+
             await App.Current.MainPage.DisplayAlert("Uspješno ocijenjeno", "", "OK");
 
 
         }
 
         public Proizvodi Proizvod { get; set; }
-        public ObservableCollection<Proizvodi> ProizvodiList { get; set; } = new ObservableCollection<Proizvodi>();
         public ObservableCollection<Ocjene> OcjeneArtiklaList { get; set; } = new ObservableCollection<Ocjene>();
 
 
 
         public async Task Init()
+        {
+            await UcitajOcjenu();
+
+        }
+
+        private async Task UcitajOcjenu()
         {
             var listaocjena = await _ocjeneService.GetAll<List<Ocjene>>(null);
             Ocijenjeno = false;
@@ -90,17 +95,6 @@ namespace EProdajaRacOp.MobileApp.ViewModels
             else
             {
                 ProsjecnaOcjena = 0;
-            }
-
-
-            var listaartikala = await _proizvodiService.GetAll<List<Proizvodi>>(null);
-
-            if (ProizvodiList.Count == 0)
-            {
-                foreach (var item in listaartikala)
-                {
-                    ProizvodiList.Add(item);
-                }
             }
         }
 

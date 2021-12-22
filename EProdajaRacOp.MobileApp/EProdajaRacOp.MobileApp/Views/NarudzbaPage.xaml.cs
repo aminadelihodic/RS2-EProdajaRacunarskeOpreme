@@ -83,10 +83,10 @@ namespace EProdajaRacOp.MobileApp.Views
             await DisplayAlert("Uspjeh", "Uspjesno ste napravili novu narudzbu", "OK");
             model.NarudzbaList.Clear();
             CartService.Cart.Clear();
-            lblBrojArtikala.Text = "Broj artikala: 0";
-            lblIznos.Text = "Iznos: 0 KM";
 
-           await Navigation.PushAsync(new UplatiNarudžbuPage(model.Iznos, narudzba.NarudzbaId));
+            model.Init();
+
+            await Navigation.PushAsync(new UplatiNarudžbuPage(model.Iznos, narudzba.NarudzbaId));
 
         }
 
@@ -100,8 +100,8 @@ namespace EProdajaRacOp.MobileApp.Views
 
             model.NarudzbaList.Clear();
             CartService.Cart.Clear();
-            lblBrojArtikala.Text = "Broj artikala: 0";
-            lblIznos.Text = "Iznos: 0 KM";
+
+            model.Init();
 
             await DisplayAlert("Uspjeh", "Narudžba je uspješno otkazana.", "OK");
 
