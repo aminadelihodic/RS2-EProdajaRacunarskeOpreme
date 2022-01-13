@@ -25,7 +25,10 @@ namespace EProdajaRacunarskeOpreme.WinUI.Proizvodi
         {
             await LoadDgv();
         }
-
+        private void Reload(object sender,EventArgs e)
+        {
+            frmPrikazProizvoda_Load(sender, e);
+        }
         private async Task LoadDgv()
         {
             ProizvodiSearchObject searchobject = new ProizvodiSearchObject()
@@ -49,6 +52,7 @@ namespace EProdajaRacunarskeOpreme.WinUI.Proizvodi
         {
             frmDodajUrediProizvod frm = new frmDodajUrediProizvod();
             frm.ShowDialog();
+            Reload(this, EventArgs.Empty);
         }
 
         private void dgv_Proizvodi_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -58,6 +62,7 @@ namespace EProdajaRacunarskeOpreme.WinUI.Proizvodi
             //
             frmDodajUrediProizvod frm = new frmDodajUrediProizvod(item as Prodaja.Model.Proizvodi);
             frm.ShowDialog();
+            Reload(this, EventArgs.Empty);
         }
     }
 }

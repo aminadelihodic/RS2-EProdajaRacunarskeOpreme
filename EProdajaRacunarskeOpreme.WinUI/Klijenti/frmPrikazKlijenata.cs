@@ -25,6 +25,15 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
             await LoadDataGrid();
         }
 
+        private async void frmPrikazKlijenata_Load(object sender, EventArgs e)
+        {
+            await LoadDataGrid();
+        }
+        private void Reload(object sender,EventArgs e)
+        {
+            frmPrikazKlijenata_Load(sender, e);
+        }
+
         private void dgv_Korisnici_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var item = dgv_Korisnici.SelectedRows[0].DataBoundItem;
@@ -32,17 +41,14 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
 
             frmDodajIzmjeniKlijenta frm = new frmDodajIzmjeniKlijenta(item as Prodaja.Model.Klijenti);
             frm.ShowDialog();
+            Reload(this, EventArgs.Empty);
         }
 
         private void btn_Novi_Click(object sender, EventArgs e)
         {
             frmDodajIzmjeniKlijenta frm = new frmDodajIzmjeniKlijenta();
             frm.ShowDialog();
-        }
-
-        private async Task frmPrikazKlijenata_LoadAsync(object sender, EventArgs e)
-        {
-            await LoadDataGrid();
+            Reload(this, EventArgs.Empty);
         }
 
         private async Task LoadDataGrid()

@@ -24,7 +24,6 @@ namespace EProdajaRacunarskeOpreme.WinUI.Dobavljaci
             InitializeComponent();
             _dobavljaci = dobavljaci;
         }
-
         private void frmDodajUrediDobavljaca_Load(object sender, EventArgs e)
         {
             if (_dobavljaci != null)

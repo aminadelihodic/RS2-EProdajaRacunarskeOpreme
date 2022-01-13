@@ -7,7 +7,13 @@ using System.Threading.Tasks;
 
 namespace EProdajaRacunarskeOpreme.WebApi.IRepository
 {
-    public interface IRepositoryNabavka : IRepositoryCRUD<Prodaja.Model.Nabavka, NabavkaSearchObject, NabavkaInsertRequest, NabavkaUpdateRequest>
+    public interface IRepositoryNabavka 
     {
+        List<Prodaja.Model.Nabavka> Get(NabavkaSearchObject request);
+        Prodaja.Model.Nabavka GetById(int id);
+
+        Prodaja.Model.Nabavka Insert(NabavkaInsertRequest request);
+
+        Prodaja.Model.Nabavka Update(int id, NabavkaUpdateRequest request);
     }
 }

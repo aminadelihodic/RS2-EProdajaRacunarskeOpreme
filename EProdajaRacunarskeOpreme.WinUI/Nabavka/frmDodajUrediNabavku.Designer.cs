@@ -54,42 +54,43 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.BackColor = System.Drawing.Color.LightGray;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label3.Location = new System.Drawing.Point(51, 255);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 20);
+            this.label3.Size = new System.Drawing.Size(59, 20);
             this.label3.TabIndex = 41;
             this.label3.Text = "Cijena";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.BackColor = System.Drawing.Color.LightGray;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label2.Location = new System.Drawing.Point(51, 311);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 20);
+            this.label2.Size = new System.Drawing.Size(62, 20);
             this.label2.TabIndex = 39;
             this.label2.Text = "Datum";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.BackColor = System.Drawing.Color.LightGray;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(50, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 20);
+            this.label1.Size = new System.Drawing.Size(119, 20);
             this.label1.TabIndex = 37;
             this.label1.Text = "Sifra nabavke";
             // 
             // txtBrojNabavke
             // 
-            this.txtBrojNabavke.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtBrojNabavke.BackColor = System.Drawing.Color.LightGray;
+            this.txtBrojNabavke.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBrojNabavke.Location = new System.Drawing.Point(172, 38);
             this.txtBrojNabavke.Name = "txtBrojNabavke";
             this.txtBrojNabavke.Size = new System.Drawing.Size(175, 20);
@@ -98,42 +99,43 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.BackColor = System.Drawing.Color.LightGray;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label7.Location = new System.Drawing.Point(50, 88);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 20);
+            this.label7.Size = new System.Drawing.Size(87, 20);
             this.label7.TabIndex = 65;
             this.label7.Text = "Dobavljac";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.BackColor = System.Drawing.Color.LightGray;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label6.Location = new System.Drawing.Point(50, 138);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 20);
+            this.label6.Size = new System.Drawing.Size(72, 20);
             this.label6.TabIndex = 63;
             this.label6.Text = "Korisnik";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.BackColor = System.Drawing.Color.LightGray;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label5.Location = new System.Drawing.Point(51, 196);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 20);
+            this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 61;
             this.label5.Text = "Kolicina";
             // 
             // txt_Kolicina
             // 
-            this.txt_Kolicina.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_Kolicina.BackColor = System.Drawing.Color.LightGray;
+            this.txt_Kolicina.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Kolicina.Location = new System.Drawing.Point(170, 196);
             this.txt_Kolicina.Name = "txt_Kolicina";
             this.txt_Kolicina.Size = new System.Drawing.Size(177, 20);
@@ -141,12 +143,13 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
             // 
             // btn_Nabavka
             // 
-            this.btn_Nabavka.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_Nabavka.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btn_Nabavka.BackColor = System.Drawing.Color.Silver;
+            this.btn_Nabavka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Nabavka.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn_Nabavka.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_Nabavka.Location = new System.Drawing.Point(222, 493);
+            this.btn_Nabavka.Location = new System.Drawing.Point(57, 493);
             this.btn_Nabavka.Name = "btn_Nabavka";
-            this.btn_Nabavka.Size = new System.Drawing.Size(125, 35);
+            this.btn_Nabavka.Size = new System.Drawing.Size(290, 35);
             this.btn_Nabavka.TabIndex = 59;
             this.btn_Nabavka.Text = "Sačuvaj";
             this.btn_Nabavka.UseVisualStyleBackColor = false;
@@ -154,6 +157,8 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
             // 
             // btn_DodajDob
             // 
+            this.btn_DodajDob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DodajDob.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn_DodajDob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn_DodajDob.Location = new System.Drawing.Point(224, 428);
             this.btn_DodajDob.Name = "btn_DodajDob";
@@ -165,6 +170,8 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
             // 
             // btn_PrikazDob
             // 
+            this.btn_PrikazDob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_PrikazDob.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn_PrikazDob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn_PrikazDob.Location = new System.Drawing.Point(57, 428);
             this.btn_PrikazDob.Name = "btn_PrikazDob";
@@ -183,6 +190,8 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
             // 
             // cmbKorisnik
             // 
+            this.cmbKorisnik.BackColor = System.Drawing.Color.LightGray;
+            this.cmbKorisnik.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbKorisnik.FormattingEnabled = true;
             this.cmbKorisnik.Location = new System.Drawing.Point(170, 137);
             this.cmbKorisnik.Margin = new System.Windows.Forms.Padding(2);
@@ -192,6 +201,8 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
             // 
             // btn_DodajPro
             // 
+            this.btn_DodajPro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DodajPro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn_DodajPro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn_DodajPro.Location = new System.Drawing.Point(222, 372);
             this.btn_DodajPro.Name = "btn_DodajPro";
@@ -203,6 +214,9 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
             // 
             // cmbDob
             // 
+            this.cmbDob.BackColor = System.Drawing.Color.LightGray;
+            this.cmbDob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDob.ForeColor = System.Drawing.Color.Black;
             this.cmbDob.FormattingEnabled = true;
             this.cmbDob.Location = new System.Drawing.Point(170, 90);
             this.cmbDob.Margin = new System.Windows.Forms.Padding(2);
@@ -212,6 +226,8 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button1.Location = new System.Drawing.Point(57, 372);
             this.button1.Name = "button1";
@@ -227,7 +243,8 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
             // 
             // txtCijena
             // 
-            this.txtCijena.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtCijena.BackColor = System.Drawing.Color.LightGray;
+            this.txtCijena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCijena.Location = new System.Drawing.Point(170, 257);
             this.txtCijena.Name = "txtCijena";
             this.txtCijena.Size = new System.Drawing.Size(177, 20);
@@ -237,6 +254,8 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(421, 560);
             this.Controls.Add(this.txtCijena);
             this.Controls.Add(this.button1);

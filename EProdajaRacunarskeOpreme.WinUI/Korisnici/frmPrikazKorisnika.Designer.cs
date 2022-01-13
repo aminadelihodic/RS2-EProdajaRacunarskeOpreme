@@ -31,17 +31,17 @@ namespace EProdajaRacunarskeOpreme.WinUI.Korisnici
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgv_Korisnici = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_Novi = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_PrikaziKorisnika = new System.Windows.Forms.Button();
-            this.txtIme = new System.Windows.Forms.TextBox();
             this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KorisnickoIme = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Uloge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_Novi = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_PrikaziKorisnika = new System.Windows.Forms.Button();
+            this.txtIme = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Korisnici)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -78,6 +78,54 @@ namespace EProdajaRacunarskeOpreme.WinUI.Korisnici
             this.dgv_Korisnici.Size = new System.Drawing.Size(739, 262);
             this.dgv_Korisnici.TabIndex = 0;
             this.dgv_Korisnici.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Korisnici_CellContentDoubleClick);
+            // 
+            // Ime
+            // 
+            this.Ime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ime.DataPropertyName = "Ime";
+            this.Ime.HeaderText = "Ime";
+            this.Ime.Name = "Ime";
+            this.Ime.ReadOnly = true;
+            // 
+            // Prezime
+            // 
+            this.Prezime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Prezime.DataPropertyName = "Prezime";
+            this.Prezime.HeaderText = "Prezime";
+            this.Prezime.Name = "Prezime";
+            this.Prezime.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Telefon
+            // 
+            this.Telefon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Telefon.DataPropertyName = "Telefon";
+            this.Telefon.HeaderText = "Telefon";
+            this.Telefon.Name = "Telefon";
+            this.Telefon.ReadOnly = true;
+            // 
+            // KorisnickoIme
+            // 
+            this.KorisnickoIme.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.KorisnickoIme.DataPropertyName = "KorisnickoIme";
+            this.KorisnickoIme.HeaderText = "Korisničko ime";
+            this.KorisnickoIme.Name = "KorisnickoIme";
+            this.KorisnickoIme.ReadOnly = true;
+            // 
+            // Uloge
+            // 
+            this.Uloge.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Uloge.DataPropertyName = "Uloge";
+            this.Uloge.HeaderText = "Uloge";
+            this.Uloge.Name = "Uloge";
+            this.Uloge.ReadOnly = true;
             // 
             // groupBox2
             // 
@@ -134,54 +182,6 @@ namespace EProdajaRacunarskeOpreme.WinUI.Korisnici
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(208, 20);
             this.txtIme.TabIndex = 0;
-            // 
-            // Ime
-            // 
-            this.Ime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Ime.DataPropertyName = "Ime";
-            this.Ime.HeaderText = "Ime";
-            this.Ime.Name = "Ime";
-            this.Ime.ReadOnly = true;
-            // 
-            // Prezime
-            // 
-            this.Prezime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Prezime.DataPropertyName = "Prezime";
-            this.Prezime.HeaderText = "Prezime";
-            this.Prezime.Name = "Prezime";
-            this.Prezime.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Telefon
-            // 
-            this.Telefon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Telefon.DataPropertyName = "Telefon";
-            this.Telefon.HeaderText = "Telefon";
-            this.Telefon.Name = "Telefon";
-            this.Telefon.ReadOnly = true;
-            // 
-            // KorisnickoIme
-            // 
-            this.KorisnickoIme.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.KorisnickoIme.DataPropertyName = "KorisnickoIme";
-            this.KorisnickoIme.HeaderText = "Korisničko ime";
-            this.KorisnickoIme.Name = "KorisnickoIme";
-            this.KorisnickoIme.ReadOnly = true;
-            // 
-            // Uloge
-            // 
-            this.Uloge.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Uloge.DataPropertyName = "Uloge";
-            this.Uloge.HeaderText = "Uloge";
-            this.Uloge.Name = "Uloge";
-            this.Uloge.ReadOnly = true;
             // 
             // frmPrikazKorisnika
             // 

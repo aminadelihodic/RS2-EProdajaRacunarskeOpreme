@@ -24,7 +24,7 @@ namespace EProdajaRacunarskeOpreme.WebApi.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin,Prodavac")]
         public List<Prodaja.Model.Korisnici> Get([FromQuery] KorisniciSearchObject request)
         {
             return _service.Get(request);

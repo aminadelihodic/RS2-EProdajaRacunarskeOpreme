@@ -30,10 +30,16 @@ namespace EProdajaRacunarskeOpreme.WebApi.Database
                     UlogaId = 1,
                     Naziv = "Admin",
                     Opis = "Upravljanje sistemom"
+                },
+                new Uloge()
+                {
+                    UlogaId = 2,
+                    Naziv = "Prodavac",
+                    Opis = "Upravljanje robom"
                 });
             #endregion
 
-            #region Dodavanje proizvoda
+                #region Dodavanje proizvoda
             modelBuilder.Entity<Proizvodi>().HasData(
                 new Proizvodi()
                 {
@@ -302,16 +308,34 @@ namespace EProdajaRacunarskeOpreme.WebApi.Database
                     KorisnickoIme = "admin",
                     LozinkaSalt = Salt[0],
                     LozinkaHash = RepositoryKorisnici.GenerateHash(Salt[0], "test")
+                },
+                new Korisnici()
+                {
+                    KorisnikId = 2,
+                    Ime = "Prodavac",
+                    Prezime = "Prodavac",
+                    Email = "prodavac@mail.com",
+                    Telefon = "063232983",
+                    KorisnickoIme = "prodavac",
+                    LozinkaSalt = Salt[0],
+                    LozinkaHash = RepositoryKorisnici.GenerateHash(Salt[0], "test")
                 });
             #endregion
 
-            #region Dodavanje korisnickih uloga korisnicima
+                #region Dodavanje korisnickih uloga korisnicima
             modelBuilder.Entity<KorisniciUloge>().HasData(
                 new KorisniciUloge()
                 {
                     KorisnikUlogaId = 1,
                     KorisnikId = 1,
                     UlogaId = 1,
+                    DatumIzmjene = DateTime.Now
+                },
+                new KorisniciUloge()
+                {
+                    KorisnikUlogaId = 2,
+                    KorisnikId = 2,
+                    UlogaId = 2,
                     DatumIzmjene = DateTime.Now
                 }
             );

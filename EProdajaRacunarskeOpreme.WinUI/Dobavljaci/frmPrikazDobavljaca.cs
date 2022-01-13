@@ -30,6 +30,10 @@ namespace EProdajaRacunarskeOpreme.WinUI.Dobavljaci
             await LoadDataGrid();
         }
 
+        private void Reload(object sender, EventArgs e)
+        {
+            frmPrikazDobavljaca_Load(sender, e);
+        }
         private async Task LoadDataGrid()
         {
             DobavljaciSearchObject searchobject = new DobavljaciSearchObject()
@@ -49,12 +53,14 @@ namespace EProdajaRacunarskeOpreme.WinUI.Dobavljaci
 
             frmDodajUrediDobavljaca frm = new frmDodajUrediDobavljaca(item as Prodaja.Model.Dobavljaci);
             frm.ShowDialog();
+            Reload(this, EventArgs.Empty);
         }
 
         private void btn_Novi_Click(object sender, EventArgs e)
         {
             frmDodajUrediDobavljaca frm = new frmDodajUrediDobavljaca();
             frm.ShowDialog();
+            Reload(this, EventArgs.Empty);
         }
     }
 }

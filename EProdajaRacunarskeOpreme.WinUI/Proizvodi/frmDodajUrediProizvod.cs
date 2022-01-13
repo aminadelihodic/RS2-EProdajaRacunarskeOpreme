@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -41,7 +42,6 @@ namespace EProdajaRacunarskeOpreme.WinUI.Proizvodi
                 cmbProizvodjac.SelectedIndex = _proizvodi.ProizvodjacId;
                 if (_proizvodi.Slika != null && _proizvodi.Slika.Length > 0)
                     pictureBox.Image = Helper.ImageHelper.FromByteToImage(_proizvodi.Slika);
-
             }
         }
 
@@ -94,6 +94,7 @@ namespace EProdajaRacunarskeOpreme.WinUI.Proizvodi
                 {
                     insert.Slika = update.Slika = Helper.ImageHelper.FromImageToByte(pictureBox.Image);
                 }
+
                 if (_proizvodi == null)
                 {
                     await _service.Insert<Prodaja.Model.Proizvodi>(insert);
@@ -107,10 +108,18 @@ namespace EProdajaRacunarskeOpreme.WinUI.Proizvodi
                     this.Close();
                 }
             }
-
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private bool ValidirajUnos()
+        {
+            return
+                Validator.ValidirajKontrolu(pictureBox, err, "Obavezna vrijednost") &&
+                Validator.ValidirajKontrolu(txtNaziv, err, "Obavezna vrijednost") &&
+                Validator.ValidirajKontrolu(cmbProizvodjac, err, "Obavezna vrijednost") &&
+                Validator.ValidirajKontrolu(cmbVrstaProizvoda, err, "Obavezna vrijednost");
+        }
+
+        private void btn_ucitajsliku_Click(object sender, EventArgs e)
         {
             var result = openFileDialog1.ShowDialog();
 
@@ -127,15 +136,6 @@ namespace EProdajaRacunarskeOpreme.WinUI.Proizvodi
                 pictureBox.Image = image;
             }
         }
-        private bool ValidirajUnos()
-        {
-            return
-                Validator.ValidirajKontrolu(pictureBox, err, "Obavezna vrijednost") &&
-                Validator.ValidirajKontrolu(txtNaziv, err, "Obavezna vrijednost") &&
-                Validator.ValidirajKontrolu(cmbProizvodjac, err, "Obavezna vrijednost") &&
-                Validator.ValidirajKontrolu(cmbVrstaProizvoda, err, "Obavezna vrijednost");
-        }
-
-
     }
-}
+    }
+

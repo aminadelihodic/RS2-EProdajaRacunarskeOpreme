@@ -25,7 +25,10 @@ namespace EProdajaRacunarskeOpreme.WinUI.Korisnici
             await LoadDataGrid();
 
         }
-
+        private void Reload(object sender,EventArgs e)
+        {
+            frmPrikazKorisnika_Load(sender, e);
+        }
         private async Task LoadDataGrid()
         {
             KorisniciSearchObject searchobject = new KorisniciSearchObject()
@@ -51,12 +54,14 @@ namespace EProdajaRacunarskeOpreme.WinUI.Korisnici
             
             frmDodajUrediKorisnika frm = new frmDodajUrediKorisnika(item as Prodaja.Model.Korisnici);
             frm.ShowDialog();
+            Reload(this, EventArgs.Empty);
         }
 
         private void btn_Novi_Click(object sender, EventArgs e)
         {
             frmDodajUrediKorisnika frm = new frmDodajUrediKorisnika();
             frm.ShowDialog();
+            Reload(this, EventArgs.Empty);
         }
 
     }

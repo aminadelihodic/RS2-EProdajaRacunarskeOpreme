@@ -42,28 +42,29 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
             this.label8 = new System.Windows.Forms.Label();
             this.err = new System.Windows.Forms.ErrorProvider(this.components);
             this.dgvStavke = new System.Windows.Forms.DataGridView();
+            this.Proizvod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Količina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UkupnaCijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCijena = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbProizvod = new System.Windows.Forms.ComboBox();
             this.txtKolicina = new System.Windows.Forms.TextBox();
             this.btnDodajStavku = new System.Windows.Forms.Button();
-            this.Proizvod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Količina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UkupnaCijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.err)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStavke)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Nabavka
             // 
-            this.btn_Nabavka.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_Nabavka.BackColor = System.Drawing.Color.Silver;
+            this.btn_Nabavka.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Nabavka.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn_Nabavka.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_Nabavka.Location = new System.Drawing.Point(400, 395);
+            this.btn_Nabavka.Location = new System.Drawing.Point(302, 395);
             this.btn_Nabavka.Name = "btn_Nabavka";
-            this.btn_Nabavka.Size = new System.Drawing.Size(107, 35);
+            this.btn_Nabavka.Size = new System.Drawing.Size(205, 35);
             this.btn_Nabavka.TabIndex = 74;
             this.btn_Nabavka.Text = "Sačuvaj";
             this.btn_Nabavka.UseVisualStyleBackColor = false;
@@ -72,42 +73,43 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.BackColor = System.Drawing.Color.LightGray;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label3.Location = new System.Drawing.Point(66, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.Size = new System.Drawing.Size(58, 20);
             this.label3.TabIndex = 71;
             this.label3.Text = "Klijent";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.BackColor = System.Drawing.Color.LightGray;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label2.Location = new System.Drawing.Point(64, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 20);
+            this.label2.Size = new System.Drawing.Size(62, 20);
             this.label2.TabIndex = 69;
             this.label2.Text = "Datum";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.BackColor = System.Drawing.Color.LightGray;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(64, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 20);
+            this.label1.Size = new System.Drawing.Size(127, 20);
             this.label1.TabIndex = 67;
             this.label1.Text = "Šifra narudžbe";
             // 
             // txtBrojNabavke
             // 
-            this.txtBrojNabavke.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtBrojNabavke.BackColor = System.Drawing.Color.LightGray;
+            this.txtBrojNabavke.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBrojNabavke.Location = new System.Drawing.Point(216, 30);
             this.txtBrojNabavke.Name = "txtBrojNabavke";
             this.txtBrojNabavke.Size = new System.Drawing.Size(205, 20);
@@ -116,10 +118,11 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
             // ck_Otkazano
             // 
             this.ck_Otkazano.AutoSize = true;
+            this.ck_Otkazano.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ck_Otkazano.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ck_Otkazano.Location = new System.Drawing.Point(216, 196);
             this.ck_Otkazano.Name = "ck_Otkazano";
-            this.ck_Otkazano.Size = new System.Drawing.Size(72, 17);
+            this.ck_Otkazano.Size = new System.Drawing.Size(80, 17);
             this.ck_Otkazano.TabIndex = 81;
             this.ck_Otkazano.Text = "Otkazano";
             this.ck_Otkazano.UseVisualStyleBackColor = true;
@@ -127,10 +130,11 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
             // ck_Status
             // 
             this.ck_Status.AutoSize = true;
+            this.ck_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ck_Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ck_Status.Location = new System.Drawing.Point(367, 196);
             this.ck_Status.Name = "ck_Status";
-            this.ck_Status.Size = new System.Drawing.Size(56, 17);
+            this.ck_Status.Size = new System.Drawing.Size(62, 17);
             this.ck_Status.TabIndex = 82;
             this.ck_Status.Text = "Status";
             this.ck_Status.UseVisualStyleBackColor = true;
@@ -144,6 +148,7 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
             // 
             // cmbKlijent
             // 
+            this.cmbKlijent.BackColor = System.Drawing.Color.LightGray;
             this.cmbKlijent.FormattingEnabled = true;
             this.cmbKlijent.Location = new System.Drawing.Point(216, 114);
             this.cmbKlijent.Margin = new System.Windows.Forms.Padding(2);
@@ -154,12 +159,12 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.BackColor = System.Drawing.Color.LightGray;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label8.Location = new System.Drawing.Point(66, 74);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 20);
+            this.label8.Size = new System.Drawing.Size(139, 20);
             this.label8.TabIndex = 87;
             this.label8.Text = "Cijena narudžbe";
             // 
@@ -184,59 +189,6 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
             this.dgvStavke.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStavke.Size = new System.Drawing.Size(463, 132);
             this.dgvStavke.TabIndex = 95;
-            // 
-            // txtCijena
-            // 
-            this.txtCijena.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtCijena.Location = new System.Drawing.Point(216, 73);
-            this.txtCijena.Name = "txtCijena";
-            this.txtCijena.ReadOnly = true;
-            this.txtCijena.Size = new System.Drawing.Size(100, 20);
-            this.txtCijena.TabIndex = 96;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(44, 368);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
-            this.label4.TabIndex = 97;
-            this.label4.Text = "Proizvod:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(299, 368);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
-            this.label5.TabIndex = 98;
-            this.label5.Text = "Količina: ";
-            // 
-            // cmbProizvod
-            // 
-            this.cmbProizvod.FormattingEnabled = true;
-            this.cmbProizvod.Location = new System.Drawing.Point(100, 365);
-            this.cmbProizvod.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbProizvod.Name = "cmbProizvod";
-            this.cmbProizvod.Size = new System.Drawing.Size(191, 21);
-            this.cmbProizvod.TabIndex = 99;
-            // 
-            // txtKolicina
-            // 
-            this.txtKolicina.Location = new System.Drawing.Point(355, 365);
-            this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(71, 20);
-            this.txtKolicina.TabIndex = 100;
-            // 
-            // btnDodajStavku
-            // 
-            this.btnDodajStavku.Location = new System.Drawing.Point(432, 363);
-            this.btnDodajStavku.Name = "btnDodajStavku";
-            this.btnDodajStavku.Size = new System.Drawing.Size(75, 23);
-            this.btnDodajStavku.TabIndex = 101;
-            this.btnDodajStavku.Text = "Dodaj";
-            this.btnDodajStavku.UseVisualStyleBackColor = true;
-            this.btnDodajStavku.Click += new System.EventHandler(this.btnDodajStavku_Click);
             // 
             // Proizvod
             // 
@@ -270,10 +222,76 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
             this.UkupnaCijena.Name = "UkupnaCijena";
             this.UkupnaCijena.ReadOnly = true;
             // 
+            // txtCijena
+            // 
+            this.txtCijena.BackColor = System.Drawing.Color.LightGray;
+            this.txtCijena.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCijena.Location = new System.Drawing.Point(216, 73);
+            this.txtCijena.Name = "txtCijena";
+            this.txtCijena.ReadOnly = true;
+            this.txtCijena.Size = new System.Drawing.Size(100, 20);
+            this.txtCijena.TabIndex = 96;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.Color.LightCoral;
+            this.label4.Location = new System.Drawing.Point(44, 368);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.TabIndex = 97;
+            this.label4.Text = "Proizvod:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.Color.LightCoral;
+            this.label5.Location = new System.Drawing.Point(299, 368);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.TabIndex = 98;
+            this.label5.Text = "Količina: ";
+            // 
+            // cmbProizvod
+            // 
+            this.cmbProizvod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbProizvod.ForeColor = System.Drawing.Color.Salmon;
+            this.cmbProizvod.FormattingEnabled = true;
+            this.cmbProizvod.Location = new System.Drawing.Point(109, 365);
+            this.cmbProizvod.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbProizvod.Name = "cmbProizvod";
+            this.cmbProizvod.Size = new System.Drawing.Size(182, 21);
+            this.cmbProizvod.TabIndex = 99;
+            // 
+            // txtKolicina
+            // 
+            this.txtKolicina.BackColor = System.Drawing.Color.LightGray;
+            this.txtKolicina.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtKolicina.Location = new System.Drawing.Point(359, 365);
+            this.txtKolicina.Name = "txtKolicina";
+            this.txtKolicina.Size = new System.Drawing.Size(67, 20);
+            this.txtKolicina.TabIndex = 100;
+            // 
+            // btnDodajStavku
+            // 
+            this.btnDodajStavku.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDodajStavku.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnDodajStavku.ForeColor = System.Drawing.Color.LightCoral;
+            this.btnDodajStavku.Location = new System.Drawing.Point(432, 363);
+            this.btnDodajStavku.Name = "btnDodajStavku";
+            this.btnDodajStavku.Size = new System.Drawing.Size(75, 23);
+            this.btnDodajStavku.TabIndex = 101;
+            this.btnDodajStavku.Text = "Dodaj";
+            this.btnDodajStavku.UseVisualStyleBackColor = true;
+            this.btnDodajStavku.Click += new System.EventHandler(this.btnDodajStavku_Click);
+            // 
             // frmDodajUrediNarudzbu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(530, 442);
             this.Controls.Add(this.btnDodajStavku);
             this.Controls.Add(this.txtKolicina);

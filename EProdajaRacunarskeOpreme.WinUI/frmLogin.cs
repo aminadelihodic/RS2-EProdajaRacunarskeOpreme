@@ -18,7 +18,8 @@ namespace EProdajaRacunarskeOpreme.WinUI
             InitializeComponent();
         }
 
-        private async void btnLogin_Click_1(object sender, EventArgs e)
+
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
             try
             {
@@ -31,14 +32,23 @@ namespace EProdajaRacunarskeOpreme.WinUI
                 {
                     foreach (var korisnik in result)
                     {
-                        if(korisnik.KorisnickoIme == APIService.Username)
+                        if (korisnik.KorisnickoIme == APIService.Username)
                         {
                             APIService.PrijavljeniKorisnik = korisnik;
 
-                            frmPocetna frm = new frmPocetna();
-                            frm.Show();
+                            if (APIService.PrijavljeniKorisnik.KorisniciUloge.Any(x => x.Uloga.Naziv == "Prodavac"))
+                            {
+                                Form frm = new frmProdavac();
+                                frm.Show();
+                            }
+                            else
+                            {
+                                Form frm = new frmPocetna();
+                                frm.Show();
+                            }
                             return;
                         }
+
                     }
 
                     throw new Exception("Korisnik nije pronađen.");

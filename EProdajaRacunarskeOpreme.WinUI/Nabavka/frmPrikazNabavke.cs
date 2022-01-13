@@ -29,7 +29,10 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
         {
             await LoadDgv();
         }
-
+        private void Reload(object sender,EventArgs e)
+        {
+            frmPrikazNabavke_Load(sender, e);
+        }
         private async Task LoadDgv()
         {
             NabavkaSearchObject searchobject = new NabavkaSearchObject()
@@ -49,6 +52,7 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
         {
             frmDodajUrediNabavku frm = new frmDodajUrediNabavku();
             frm.ShowDialog();
+            Reload(this, EventArgs.Empty);
         }
 
         private void dgv_Nabavka_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -58,6 +62,7 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
 
             frmDodajUrediNabavku frm = new frmDodajUrediNabavku(item as Prodaja.Model.Nabavka);
             frm.ShowDialog();
+            Reload(this, EventArgs.Empty);
         }
     }
 }

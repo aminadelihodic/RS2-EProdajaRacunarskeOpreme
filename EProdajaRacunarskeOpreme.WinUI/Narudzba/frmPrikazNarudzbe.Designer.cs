@@ -47,10 +47,13 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.LightGray;
             this.groupBox2.Controls.Add(this.btn_Novi);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.btn_PrikaziNabavku);
             this.groupBox2.Controls.Add(this.txtBroj);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Salmon;
             this.groupBox2.Location = new System.Drawing.Point(34, 25);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(736, 113);
@@ -60,10 +63,11 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
             // 
             // btn_Novi
             // 
+            this.btn_Novi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Novi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_Novi.Location = new System.Drawing.Point(628, 58);
+            this.btn_Novi.Location = new System.Drawing.Point(613, 46);
             this.btn_Novi.Name = "btn_Novi";
-            this.btn_Novi.Size = new System.Drawing.Size(102, 20);
+            this.btn_Novi.Size = new System.Drawing.Size(117, 32);
             this.btn_Novi.TabIndex = 3;
             this.btn_Novi.Text = "Nova narudzba";
             this.btn_Novi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -76,16 +80,17 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(20, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(87, 15);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Broj narudzbe";
+            this.label1.Text = "Šifra narudzbe";
             // 
             // btn_PrikaziNabavku
             // 
+            this.btn_PrikaziNabavku.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_PrikaziNabavku.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_PrikaziNabavku.Location = new System.Drawing.Point(487, 58);
+            this.btn_PrikaziNabavku.Location = new System.Drawing.Point(487, 46);
             this.btn_PrikaziNabavku.Name = "btn_PrikaziNabavku";
-            this.btn_PrikaziNabavku.Size = new System.Drawing.Size(102, 20);
+            this.btn_PrikaziNabavku.Size = new System.Drawing.Size(102, 32);
             this.btn_PrikaziNabavku.TabIndex = 1;
             this.btn_PrikaziNabavku.Text = "Prikazi";
             this.btn_PrikaziNabavku.UseVisualStyleBackColor = true;
@@ -93,14 +98,18 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
             // 
             // txtBroj
             // 
+            this.txtBroj.BackColor = System.Drawing.Color.LightGray;
+            this.txtBroj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBroj.Location = new System.Drawing.Point(23, 58);
             this.txtBroj.Name = "txtBroj";
-            this.txtBroj.Size = new System.Drawing.Size(208, 20);
+            this.txtBroj.Size = new System.Drawing.Size(208, 21);
             this.txtBroj.TabIndex = 0;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgv_Narudzba);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Salmon;
             this.groupBox1.Location = new System.Drawing.Point(28, 144);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(745, 281);
@@ -119,11 +128,11 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
             this.Status,
             this.Klijent});
             this.dgv_Narudzba.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Narudzba.Location = new System.Drawing.Point(3, 16);
+            this.dgv_Narudzba.Location = new System.Drawing.Point(3, 17);
             this.dgv_Narudzba.Name = "dgv_Narudzba";
             this.dgv_Narudzba.ReadOnly = true;
             this.dgv_Narudzba.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Narudzba.Size = new System.Drawing.Size(739, 262);
+            this.dgv_Narudzba.Size = new System.Drawing.Size(739, 261);
             this.dgv_Narudzba.TabIndex = 0;
             this.dgv_Narudzba.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Narudzba_CellContentDoubleClick);
             // 
@@ -165,6 +174,7 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

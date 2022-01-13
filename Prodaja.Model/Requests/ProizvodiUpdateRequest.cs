@@ -15,8 +15,5 @@ namespace Prodaja.Model
         public int VrstaProizvodaId { get; set; }
 
 
-
-
-       
     }
 }

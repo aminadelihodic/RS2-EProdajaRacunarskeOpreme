@@ -11,24 +11,28 @@ using System.Threading.Tasks;
 
 namespace EProdajaRacunarskeOpreme.WebApi.Repository
 {
-    public class RepositoryNabavka : RepositoryBaseCrud<Prodaja.Model.Nabavka, Database.Nabavka, NabavkaSearchObject, NabavkaInsertRequest, NabavkaUpdateRequest>, IRepositoryNabavka
+    public class RepositoryNabavka : IRepositoryNabavka 
     {
-        public RepositoryNabavka(MojDbContext context, IMapper mapper) : base(context, mapper)
+        private readonly MojDbContext _context;
+        private readonly IMapper _mapper;
+        public RepositoryNabavka(MojDbContext context, IMapper mapper)
         {
-
+            _context = context;
+            _mapper = mapper;
         }
-        public override IEnumerable<Prodaja.Model.Nabavka> Get(NabavkaSearchObject search = null)
+
+        public List<Prodaja.Model.Nabavka> Get(NabavkaSearchObject request)
         {
             var entity = _context.Set<Database.Nabavka>().AsQueryable();
-            if (!string.IsNullOrWhiteSpace(search?.BrojNabavke))
+            if (!string.IsNullOrWhiteSpace(request?.BrojNabavke))
             {
-                entity = entity.Where(x => x.BrojNabavke.Contains(search.BrojNabavke));
+                entity = entity.Where(x => x.BrojNabavke.Contains(request.BrojNabavke));
             }
-            if (search?.IncludeDobavljac == true)
+            if (request?.IncludeDobavljac == true)
             {
                 entity = entity.Include(x => x.Dobavljac);
             }
-            if (search?.IncludeKorisnik == true)
+            if (request?.IncludeKorisnik == true)
             {
                 entity = entity.Include(x => x.Korisnik);
             }
@@ -36,14 +40,23 @@ namespace EProdajaRacunarskeOpreme.WebApi.Repository
             var list = entity.ToList();
             return _mapper.Map<List<Prodaja.Model.Nabavka>>(list);
         }
-        public override Prodaja.Model.Nabavka Insert(NabavkaInsertRequest request)
+
+        public Prodaja.Model.Nabavka GetById(int id)
+        {
+            var entity = _context.Nabavka.Find(id);
+
+            return _mapper.Map<Prodaja.Model.Nabavka>(entity);
+        }
+
+        public Prodaja.Model.Nabavka Insert(NabavkaInsertRequest request)
         {
             var entity = _mapper.Map<Database.Nabavka>(request);
             _context.Add(entity);
             _context.SaveChanges();
             return _mapper.Map<Prodaja.Model.Nabavka>(entity);
         }
-        public override Prodaja.Model.Nabavka Update(int id, NabavkaUpdateRequest request)
+
+        public Prodaja.Model.Nabavka Update(int id, NabavkaUpdateRequest request)
         {
             var entity = _context.Nabavka.Find(id);
 
@@ -53,6 +66,5 @@ namespace EProdajaRacunarskeOpreme.WebApi.Repository
 
             return _mapper.Map<Prodaja.Model.Nabavka>(entity);
         }
-        
+        }
     }
-}

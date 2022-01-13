@@ -1,8 +1,11 @@
 # RS2-EProdajaRacunarskeOpreme
 
-## Login podaci za Desktop aplikaciju (ADMIN):
+## Login podaci za Desktop aplikaciju:
 
 Username: admin<br>
+Password: test
+
+Username: prodavac<br>
 Password: test
 
 ## Login podaci za Mobile aplikaciju (KLIJENT):

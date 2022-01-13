@@ -51,6 +51,7 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.btn_PrikaziKorisnika);
             this.groupBox2.Controls.Add(this.txtIme);
+            this.groupBox2.ForeColor = System.Drawing.Color.Salmon;
             this.groupBox2.Location = new System.Drawing.Point(34, 25);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(736, 113);
@@ -82,17 +83,19 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
             // 
             // btn_PrikaziKorisnika
             // 
+            this.btn_PrikaziKorisnika.BackColor = System.Drawing.Color.LightGray;
             this.btn_PrikaziKorisnika.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn_PrikaziKorisnika.Location = new System.Drawing.Point(487, 58);
             this.btn_PrikaziKorisnika.Name = "btn_PrikaziKorisnika";
             this.btn_PrikaziKorisnika.Size = new System.Drawing.Size(102, 20);
             this.btn_PrikaziKorisnika.TabIndex = 1;
             this.btn_PrikaziKorisnika.Text = "Prikazi";
-            this.btn_PrikaziKorisnika.UseVisualStyleBackColor = true;
+            this.btn_PrikaziKorisnika.UseVisualStyleBackColor = false;
             this.btn_PrikaziKorisnika.Click += new System.EventHandler(this.btn_PrikaziKorisnika_Click);
             // 
             // txtIme
             // 
+            this.txtIme.BackColor = System.Drawing.Color.LightGray;
             this.txtIme.Location = new System.Drawing.Point(23, 58);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(208, 20);
@@ -101,6 +104,7 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgv_Korisnici);
+            this.groupBox1.ForeColor = System.Drawing.Color.Salmon;
             this.groupBox1.Location = new System.Drawing.Point(28, 144);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(745, 281);
@@ -162,11 +166,13 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPrikazKlijenata";
             this.Text = "frmPrikazKlijenata";
+            this.Load += new System.EventHandler(this.frmPrikazKlijenata_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);

@@ -56,9 +56,9 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
             this.btn_Klijenti.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_Klijenti.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn_Klijenti.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_Klijenti.Location = new System.Drawing.Point(237, 482);
+            this.btn_Klijenti.Location = new System.Drawing.Point(222, 404);
             this.btn_Klijenti.Name = "btn_Klijenti";
-            this.btn_Klijenti.Size = new System.Drawing.Size(107, 37);
+            this.btn_Klijenti.Size = new System.Drawing.Size(146, 37);
             this.btn_Klijenti.TabIndex = 27;
             this.btn_Klijenti.Text = "Sačuvaj";
             this.btn_Klijenti.UseVisualStyleBackColor = false;
@@ -68,18 +68,18 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label5.Location = new System.Drawing.Point(60, 272);
+            this.label5.Location = new System.Drawing.Point(60, 215);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 20);
+            this.label5.Size = new System.Drawing.Size(124, 20);
             this.label5.TabIndex = 25;
             this.label5.Text = "Korisnicko ime";
             // 
             // txtKorisnickoIme
             // 
             this.txtKorisnickoIme.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtKorisnickoIme.Location = new System.Drawing.Point(198, 272);
+            this.txtKorisnickoIme.Location = new System.Drawing.Point(222, 215);
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
             this.txtKorisnickoIme.Size = new System.Drawing.Size(146, 20);
             this.txtKorisnickoIme.TabIndex = 24;
@@ -88,80 +88,80 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(60, 204);
+            this.label4.Location = new System.Drawing.Point(60, 169);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 20);
+            this.label4.Size = new System.Drawing.Size(69, 20);
             this.label4.TabIndex = 23;
             this.label4.Text = "Telefon";
             // 
             // txtTelefon
             // 
             this.txtTelefon.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtTelefon.Location = new System.Drawing.Point(153, 204);
+            this.txtTelefon.Location = new System.Drawing.Point(222, 169);
             this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(191, 20);
+            this.txtTelefon.Size = new System.Drawing.Size(146, 20);
             this.txtTelefon.TabIndex = 22;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(60, 141);
+            this.label3.Location = new System.Drawing.Point(60, 123);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 20);
+            this.label3.Size = new System.Drawing.Size(53, 20);
             this.label3.TabIndex = 21;
             this.label3.Text = "Email";
             // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtEmail.Location = new System.Drawing.Point(153, 143);
+            this.txtEmail.Location = new System.Drawing.Point(222, 125);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(191, 20);
+            this.txtEmail.Size = new System.Drawing.Size(146, 20);
             this.txtEmail.TabIndex = 20;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(60, 79);
+            this.label2.Location = new System.Drawing.Point(61, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 20);
+            this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 19;
             this.label2.Text = "Prezime";
             // 
             // txtPrezime
             // 
             this.txtPrezime.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtPrezime.Location = new System.Drawing.Point(153, 81);
+            this.txtPrezime.Location = new System.Drawing.Point(222, 78);
             this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(191, 20);
+            this.txtPrezime.Size = new System.Drawing.Size(146, 20);
             this.txtPrezime.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(60, 25);
+            this.label1.Location = new System.Drawing.Point(61, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 20);
+            this.label1.Size = new System.Drawing.Size(39, 20);
             this.label1.TabIndex = 17;
             this.label1.Text = "Ime";
             // 
             // txtIme
             // 
             this.txtIme.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtIme.Location = new System.Drawing.Point(153, 25);
+            this.txtIme.Location = new System.Drawing.Point(222, 22);
             this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(191, 20);
+            this.txtIme.Size = new System.Drawing.Size(146, 20);
             this.txtIme.TabIndex = 16;
             // 
             // err
@@ -171,11 +171,11 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Handwriting", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label6.Location = new System.Drawing.Point(61, 424);
+            this.label6.Location = new System.Drawing.Point(61, 355);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 18);
+            this.label6.Size = new System.Drawing.Size(155, 20);
             this.label6.TabIndex = 35;
             this.label6.Text = "Datum registracije";
             // 
@@ -184,7 +184,7 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
             this.dtp_Datum.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.dtp_Datum.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.dtp_Datum.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.dtp_Datum.Location = new System.Drawing.Point(198, 422);
+            this.dtp_Datum.Location = new System.Drawing.Point(222, 354);
             this.dtp_Datum.Name = "dtp_Datum";
             this.dtp_Datum.Size = new System.Drawing.Size(146, 20);
             this.dtp_Datum.TabIndex = 34;
@@ -193,18 +193,18 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label7.Location = new System.Drawing.Point(60, 378);
+            this.label7.Location = new System.Drawing.Point(60, 309);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 20);
+            this.label7.Size = new System.Drawing.Size(131, 20);
             this.label7.TabIndex = 39;
             this.label7.Text = "Potvrda lozinke";
             // 
             // txtLozinkaPotvrda
             // 
             this.txtLozinkaPotvrda.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtLozinkaPotvrda.Location = new System.Drawing.Point(198, 378);
+            this.txtLozinkaPotvrda.Location = new System.Drawing.Point(222, 309);
             this.txtLozinkaPotvrda.Name = "txtLozinkaPotvrda";
             this.txtLozinkaPotvrda.Size = new System.Drawing.Size(146, 20);
             this.txtLozinkaPotvrda.TabIndex = 38;
@@ -213,18 +213,18 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label8.Location = new System.Drawing.Point(60, 318);
+            this.label8.Location = new System.Drawing.Point(60, 261);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 20);
+            this.label8.Size = new System.Drawing.Size(71, 20);
             this.label8.TabIndex = 37;
             this.label8.Text = "Lozinka";
             // 
             // txtLozinka
             // 
             this.txtLozinka.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtLozinka.Location = new System.Drawing.Point(198, 321);
+            this.txtLozinka.Location = new System.Drawing.Point(222, 263);
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.Size = new System.Drawing.Size(146, 20);
             this.txtLozinka.TabIndex = 36;
@@ -233,7 +233,7 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 536);
+            this.ClientSize = new System.Drawing.Size(434, 470);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtLozinkaPotvrda);
             this.Controls.Add(this.label8);

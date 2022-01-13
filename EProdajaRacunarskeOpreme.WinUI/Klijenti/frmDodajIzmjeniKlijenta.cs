@@ -90,8 +90,8 @@ namespace EProdajaRacunarskeOpreme.WinUI.Klijenti
         {
             return
                 Validator.ValidirajKontrolu(txtKorisnickoIme, err, "Obavezna vrijednost") &&
-                Validator.ValidirajKontrolu(txtLozinka, err, "Obavezna vrijednost") &&
-                Validator.ValidirajKontrolu(txtLozinkaPotvrda, err, "Obavezna vrijednost") &&
+                Validator.ValidirajKontrolu(txtIme, err, "Obavezna vrijednost") &&
+                Validator.ValidirajKontrolu(txtPrezime, err, "Obavezna vrijednost") &&
                 Validator.ValidirajKontrolu(txtEmail, err, "Obavezna vrijednost");
             ;
         }

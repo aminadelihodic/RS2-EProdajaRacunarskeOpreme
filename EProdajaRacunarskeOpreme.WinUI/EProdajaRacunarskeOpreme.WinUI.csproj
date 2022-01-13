@@ -80,6 +80,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProdavac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProdavac.Designer.cs">
+      <DependentUpon>frmProdavac.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper\ImageHelper.cs" />
     <Compile Include="Izvještaji\frmIzvjestaji.cs">
       <SubType>Form</SubType>
@@ -123,6 +129,18 @@
     <Compile Include="Nabavka\frmDodajUrediNabavku.Designer.cs">
       <DependentUpon>frmDodajUrediNabavku.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nabavka\frmNabavka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nabavka\frmNabavka.Designer.cs">
+      <DependentUpon>frmNabavka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nabavka\frmNovaNabavka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nabavka\frmNovaNabavka.Designer.cs">
+      <DependentUpon>frmNovaNabavka.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nabavka\frmPrikazNabavke.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +152,12 @@
     </Compile>
     <Compile Include="Narudzba\frmDodajUrediNarudzbu.Designer.cs">
       <DependentUpon>frmDodajUrediNarudzbu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Narudzba\frmNarudzbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Narudzba\frmNarudzbe.Designer.cs">
+      <DependentUpon>frmNarudzbe.cs</DependentUpon>
     </Compile>
     <Compile Include="Narudzba\frmPrikazNarudzbe.cs">
       <SubType>Form</SubType>
@@ -165,6 +189,9 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmProdavac.resx">
+      <DependentUpon>frmProdavac.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Izvještaji\frmIzvjestaji.resx">
       <DependentUpon>frmIzvjestaji.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,11 +213,20 @@
     <EmbeddedResource Include="Nabavka\frmDodajUrediNabavku.resx">
       <DependentUpon>frmDodajUrediNabavku.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Nabavka\frmNabavka.resx">
+      <DependentUpon>frmNabavka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nabavka\frmNovaNabavka.resx">
+      <DependentUpon>frmNovaNabavka.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Nabavka\frmPrikazNabavke.resx">
       <DependentUpon>frmPrikazNabavke.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Narudzba\frmDodajUrediNarudzbu.resx">
       <DependentUpon>frmDodajUrediNarudzbu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Narudzba\frmNarudzbe.resx">
+      <DependentUpon>frmNarudzbe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Narudzba\frmPrikazNarudzbe.resx">
       <DependentUpon>frmPrikazNarudzbe.cs</DependentUpon>
@@ -203,19 +239,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -231,8 +267,9 @@
       <Name>Prodaja.Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\413.flat-computer-equipment-iconcm-.jpg" />
+    <None Include="Resources\shopping-cart-trolley-supermarket-store-outline-flat-illustration-isolated-white-background-shopping-cart-trolley-135365708.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

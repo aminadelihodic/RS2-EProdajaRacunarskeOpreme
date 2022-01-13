@@ -63,9 +63,10 @@ namespace EProdajaRacunarskeOpreme.WinUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _413_flat_computer_equipment_iconcm_ {
+        public static System.Drawing.Bitmap shopping_cart_trolley_supermarket_store_outline_flat_illustration_isolated_white_background_shopping_cart_trolley_135365708 {
             get {
-                object obj = ResourceManager.GetObject("413.flat-computer-equipment-iconcm-", resourceCulture);
+                object obj = ResourceManager.GetObject("shopping-cart-trolley-supermarket-store-outline-flat-illustration-isolated-white-" +
+                        "background-shopping-cart-trolley-135365708", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

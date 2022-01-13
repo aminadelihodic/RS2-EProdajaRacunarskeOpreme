@@ -24,7 +24,10 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
         {
             await LoadDgv();
         }
-
+        private void Reload(object sender,EventArgs e)
+        {
+            frmPrikazNarudzbe_Load(sender, e);
+        }
         private async void btn_PrikaziNabavku_Click(object sender, EventArgs e)
         {
             await LoadDgv();
@@ -50,12 +53,14 @@ namespace EProdajaRacunarskeOpreme.WinUI.Narudzba
 
             frmDodajUrediNarudzbu frm = new frmDodajUrediNarudzbu(item as Prodaja.Model.Narudzba);
             frm.ShowDialog();
+            Reload(this, EventArgs.Empty);
         }
 
         private void btn_Novi_Click(object sender, EventArgs e)
         {
             frmDodajUrediNarudzbu frm = new frmDodajUrediNarudzbu();
             frm.ShowDialog();
+            Reload(this, EventArgs.Empty);
         }
     }
 }

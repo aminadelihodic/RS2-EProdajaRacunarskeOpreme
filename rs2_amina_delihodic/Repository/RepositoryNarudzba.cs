@@ -10,34 +10,46 @@ using System.Threading.Tasks;
 
 namespace EProdajaRacunarskeOpreme.WebApi.Repository
 {
-    public class RepositoryNarudzba : RepositoryBaseCrud<Prodaja.Model.Narudzba, Database.Narudzba, NarudzbaSearchObject, NarudzbaInsertRequest, NarudzbaUpdateRequest>, IRepositoryNarudzba
+    public class RepositoryNarudzba : IRepositoryNarudzba 
     {
-        public RepositoryNarudzba(MojDbContext context, IMapper mapper) : base(context, mapper)
+        private readonly MojDbContext _context;
+        private readonly IMapper _mapper;
+        public RepositoryNarudzba(MojDbContext context, IMapper mapper)
         {
-
+            _context = context;
+            _mapper = mapper;
         }
-        public override IEnumerable<Prodaja.Model.Narudzba> Get(NarudzbaSearchObject search = null)
+
+        public List<Prodaja.Model.Narudzba> Get(NarudzbaSearchObject request)
         {
             var entity = _context.Set<Database.Narudzba>().AsQueryable();
-            if (!string.IsNullOrWhiteSpace(search?.BrojNarudzbe))
+            if (!string.IsNullOrWhiteSpace(request?.BrojNarudzbe))
             {
-                entity = entity.Where(x => x.BrojNarudzbe.Contains(search.BrojNarudzbe));
+                entity = entity.Where(x => x.BrojNarudzbe.Contains(request.BrojNarudzbe));
             }
-            if (search?.IncludeKlijenti == true)
+            if (request?.IncludeKlijenti == true)
             {
                 entity = entity.Include(x => x.Klijent);
             }
             var list = entity.ToList();
             return _mapper.Map<List<Prodaja.Model.Narudzba>>(list);
         }
-        public override Prodaja.Model.Narudzba Insert(NarudzbaInsertRequest request)
+
+        public Prodaja.Model.Narudzba GetById(int id)
+        {
+            var entity = _context.Narudzba.Find(id);
+
+            return _mapper.Map<Prodaja.Model.Narudzba>(entity);
+        }
+
+        public Prodaja.Model.Narudzba Insert(NarudzbaInsertRequest request)
         {
             var entity = _mapper.Map<Database.Narudzba>(request);
             _context.Add(entity);
 
             foreach (var item in request.stavke)
             {
-                
+
                 Database.NarudzbaStavke stavka = new Database.NarudzbaStavke
                 {
                     Popust = item.Popust,
@@ -45,7 +57,7 @@ namespace EProdajaRacunarskeOpreme.WebApi.Repository
                     Cijena = item.Cijena,
                     ProizvodId = item.ProizvodId
                 };
-                
+
                 entity.NarudzbaStavke.Add(stavka);
             }
 
@@ -53,7 +65,8 @@ namespace EProdajaRacunarskeOpreme.WebApi.Repository
             _context.SaveChanges();
             return _mapper.Map<Prodaja.Model.Narudzba>(entity);
         }
-        public override Prodaja.Model.Narudzba Update(int id, NarudzbaUpdateRequest request)
+
+        public Prodaja.Model.Narudzba Update(int id, NarudzbaUpdateRequest request)
         {
             var entity = _context.Narudzba.Find(id);
 
@@ -63,5 +76,46 @@ namespace EProdajaRacunarskeOpreme.WebApi.Repository
 
             return _mapper.Map<Prodaja.Model.Narudzba>(entity);
         }
+
+
+        //public Prodaja.Model.Narudzba GetById(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //public override Prodaja.Model.Narudzba Insert(NarudzbaInsertRequest request)
+        //{
+        //    var entity = _mapper.Map<Database.Narudzba>(request);
+        //    _context.Add(entity);
+
+        //    foreach (var item in request.stavke)
+        //    {
+
+        //        Database.NarudzbaStavke stavka = new Database.NarudzbaStavke
+        //        {
+        //            Popust = item.Popust,
+        //            Kolicina = item.Kolicina,
+        //            Cijena = item.Cijena,
+        //            ProizvodId = item.ProizvodId
+        //        };
+
+        //        entity.NarudzbaStavke.Add(stavka);
+        //    }
+
+
+        //    _context.SaveChanges();
+        //    return _mapper.Map<Prodaja.Model.Narudzba>(entity);
+        //}
+        //public override Prodaja.Model.Narudzba Update(int id, NarudzbaUpdateRequest request)
+        //{
+        //    var entity = _context.Narudzba.Find(id);
+
+        //    _mapper.Map(request, entity);
+
+        //    _context.SaveChanges();
+
+        //    return _mapper.Map<Prodaja.Model.Narudzba>(entity);
+        //}
+
     }
 }

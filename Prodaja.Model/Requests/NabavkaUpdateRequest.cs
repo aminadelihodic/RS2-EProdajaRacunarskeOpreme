@@ -6,7 +6,6 @@ namespace Prodaja.Model
 {
     public class NabavkaUpdateRequest
     {
-        public int NabavkaId { get; set; }
         public string BrojNabavke { get; set; }
         public DateTime Datum { get; set; }
         public decimal IznosRacuna { get; set; }

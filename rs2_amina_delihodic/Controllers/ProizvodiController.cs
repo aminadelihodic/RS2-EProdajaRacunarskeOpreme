@@ -13,6 +13,7 @@ namespace EProdajaRacunarskeOpreme.WebApi.Controllers
     
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProizvodiController : ControllerBase
     {
         private readonly IRepositoryProizvodi _service;

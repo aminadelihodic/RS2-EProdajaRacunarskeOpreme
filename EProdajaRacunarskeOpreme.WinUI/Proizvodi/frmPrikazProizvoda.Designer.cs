@@ -52,6 +52,8 @@ namespace EProdajaRacunarskeOpreme.WinUI.Proizvodi
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.btn_PrikaziProizvod);
             this.groupBox2.Controls.Add(this.txtNaziv);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Salmon;
             this.groupBox2.Location = new System.Drawing.Point(34, 25);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(736, 113);
@@ -61,10 +63,11 @@ namespace EProdajaRacunarskeOpreme.WinUI.Proizvodi
             // 
             // btn_Novi
             // 
+            this.btn_Novi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Novi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_Novi.Location = new System.Drawing.Point(628, 58);
+            this.btn_Novi.Location = new System.Drawing.Point(621, 58);
             this.btn_Novi.Name = "btn_Novi";
-            this.btn_Novi.Size = new System.Drawing.Size(102, 20);
+            this.btn_Novi.Size = new System.Drawing.Size(109, 28);
             this.btn_Novi.TabIndex = 3;
             this.btn_Novi.Text = "Novi proizvod";
             this.btn_Novi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -77,16 +80,17 @@ namespace EProdajaRacunarskeOpreme.WinUI.Proizvodi
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(20, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.Size = new System.Drawing.Size(37, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "Naziv";
             // 
             // btn_PrikaziProizvod
             // 
+            this.btn_PrikaziProizvod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_PrikaziProizvod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn_PrikaziProizvod.Location = new System.Drawing.Point(487, 58);
             this.btn_PrikaziProizvod.Name = "btn_PrikaziProizvod";
-            this.btn_PrikaziProizvod.Size = new System.Drawing.Size(102, 20);
+            this.btn_PrikaziProizvod.Size = new System.Drawing.Size(102, 28);
             this.btn_PrikaziProizvod.TabIndex = 1;
             this.btn_PrikaziProizvod.Text = "Prikazi";
             this.btn_PrikaziProizvod.UseVisualStyleBackColor = true;
@@ -94,14 +98,18 @@ namespace EProdajaRacunarskeOpreme.WinUI.Proizvodi
             // 
             // txtNaziv
             // 
+            this.txtNaziv.BackColor = System.Drawing.Color.LightGray;
+            this.txtNaziv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNaziv.Location = new System.Drawing.Point(23, 58);
             this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(208, 20);
+            this.txtNaziv.Size = new System.Drawing.Size(208, 21);
             this.txtNaziv.TabIndex = 0;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgv_Proizvodi);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Salmon;
             this.groupBox1.Location = new System.Drawing.Point(28, 144);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(745, 281);
@@ -121,11 +129,11 @@ namespace EProdajaRacunarskeOpreme.WinUI.Proizvodi
             this.VrstaProizvoda,
             this.Proizvodjac});
             this.dgv_Proizvodi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Proizvodi.Location = new System.Drawing.Point(3, 16);
+            this.dgv_Proizvodi.Location = new System.Drawing.Point(3, 17);
             this.dgv_Proizvodi.Name = "dgv_Proizvodi";
             this.dgv_Proizvodi.ReadOnly = true;
             this.dgv_Proizvodi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Proizvodi.Size = new System.Drawing.Size(739, 262);
+            this.dgv_Proizvodi.Size = new System.Drawing.Size(739, 261);
             this.dgv_Proizvodi.TabIndex = 0;
             this.dgv_Proizvodi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Proizvodi_CellContentClick);
             // 
@@ -173,6 +181,7 @@ namespace EProdajaRacunarskeOpreme.WinUI.Proizvodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
