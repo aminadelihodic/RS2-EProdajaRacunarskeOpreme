@@ -130,7 +130,7 @@ namespace EProdajaRacOp.MobileApp.ViewModels
                 }
                 CartService.Cart.Add(Proizvod.ProizvodId, this);
 
-                App.Current.MainPage.DisplayAlert("Uspjeh", "Uspjesno dodan artikal u korpu", "OK");
+                App.Current.MainPage.DisplayAlert("Uspjeh", "Uspjesno dodan proizvod u korpu", "OK");
 
             }
             else

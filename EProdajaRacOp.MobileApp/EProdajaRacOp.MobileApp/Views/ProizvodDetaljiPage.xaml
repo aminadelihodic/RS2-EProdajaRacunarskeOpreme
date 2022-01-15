@@ -42,7 +42,7 @@
 
                 <StackLayout IsVisible="{Binding NijeOcijenjeno}" Grid.Row="1" Grid.Column="0" >
 
-                    <Label  HorizontalOptions="Center" Text="Ocijeni artikal:"/>
+                    <Label  HorizontalOptions="Center" Text="Ocijeni proizvod:"/>
                     <Grid HorizontalOptions="Center" VerticalOptions="Center">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="35" />
