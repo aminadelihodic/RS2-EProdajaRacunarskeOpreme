@@ -126,7 +126,7 @@ namespace EProdajaRacunarskeOpreme.WinUI.Nabavka
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmPrikazNabavke frm = new frmPrikazNabavke();
+            frmPrikazProizvoda frm = new frmPrikazProizvoda();
             frm.ShowDialog();
         }
 
